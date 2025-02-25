@@ -1,0 +1,14 @@
+{
+    "manifest_version": 3,
+    "name": "Amazon X-Ray QuickView Remover",
+    "version": "1.0",
+    "description": "Removes the xrayQuickView div on Amazon pages.",
+    "permissions": ["scripting"],
+    "host_permissions": ["*://www.amazon.com/*"],
+    "content_scripts": [
+      {
+        "matches": ["*://www.amazon.com/gp/video*"],
+        "js": ["content.js"]
+      }
+    ]
+}
